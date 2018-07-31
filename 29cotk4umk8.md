@@ -1,5 +1,4 @@
 [tyler@fend01 flash]$ ./setup Sedov -auto
-
 Processing Shortcut file: /lustre/hpc/dark/tyler/flash/bin/setup_shortcuts.txt
 checking for needed files and directories
     checking sites Aliases file
