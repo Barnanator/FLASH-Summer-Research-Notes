@@ -79,5 +79,21 @@ FFLAGS_DEBUG = -g -C -qintsize=4 -qrealsize=8 -qfixed -qnosave -c \
 
 F90FLAGS     = -qsuffix=f=F90:cpp=F90 -qfree=f90
 f90FLAGS     = -qsuffix=f=f90:cpp=F90 -qfree=f90
+# if we are using HDF5, we need to specify the path to the include files
+CFLAGS_HDF5  = -I${HDF5_PATH}/include -DH5_USE_16_API
+CFLAGS_NCMPI = -I$(NCMPI_PATH)/include
+
+CFLAGS_OPT   = -O2 -DIBM -DNOUNDERSCORE -c \
+               -qarch=440 -qtune=440 -qmaxmem=131072
+CFLAGS_TEST  = -O2 -DIBM -DNOUNDERSCORE -c \
+               -qarch=440 -qtune=440 -qmaxmem=131072
+CFLAGS_DEBUG = -g -C -DIBM -DNOUNDERSCORE -c \
+               -qarch=440 -qtune=440 -qmaxmem=131072
+
+MDEFS = -WF,
+
+.SUFFIXES: .o .c .f .F .h .fh .F90 .f90
+
+#----------------------------------------------------------------------------
 
 ```
