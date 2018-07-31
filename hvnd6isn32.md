@@ -1,6 +1,5 @@
 ```
 Last login: Tue Jul 31 20:11:14 2018 from dynamic-oit-astroturf-d-3.princeton.edu
-
 [tyler@fend01 ~]$ pwd
 /groups/dark/tyler
 [tyler@fend01 ~]$ ls -lh
