@@ -1,6 +1,5 @@
 ```
-<Insert Code Here>
-```[tyler@fend01 flash]$ ./setup Sedov -auto
+[tyler@fend01 flash]$ ./setup Sedov -auto
 Processing Shortcut file: /lustre/hpc/dark/tyler/flash/bin/setup_shortcuts.txt
 checking for needed files and directories
     checking sites Aliases file
@@ -79,3 +78,4 @@ make: /bgl/BlueLight/ppcfloor/bglsys/bin/mpixlf90: Command not found
 make: *** [Burn_interface.o] Error 127
 [tyler@fend01 object]$ make clean
 rm -f setup_flags *.o *.mod *.a *.unit *API.h *API.c *API-bridges.F90
+```
