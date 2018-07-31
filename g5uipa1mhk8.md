@@ -95,5 +95,17 @@ MDEFS = -WF,
 .SUFFIXES: .o .c .f .F .h .fh .F90 .f90
 
 #----------------------------------------------------------------------------
+# Linker flags
+#
+#  There is a seperate version of the linker flags for each of the _OPT,
+#  _DEBUG, and _TEST cases.
+#----------------------------------------------------------------------------
+
+LFLAGS_OPT   = -o
+LFLAGS_TEST  = -o
+LFLAGS_DEBUG = -g -o
+
+#----------------------------------------------------------------------------
+# Library specific linking
 
 ```
