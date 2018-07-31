@@ -39,5 +39,24 @@ else
 # LIB_MPI = -L$(MPI_PATH)/lib -lmpich.rts -lmsglayer.rts -ldevices.rts -lrts.rts -ldevices.rts
 LIB_MPI =
 endif
+# FCOMP   = /opt/ibmcmp/xlf/bg/10.1/bin/blrts_xlf90 -I/bgl/BlueLight/ppcfloor/bglsys/include
+FCOMP   = /bgl/BlueLight/ppcfloor/bglsys/bin/mpixlf90
+# CCOMP   = /opt/ibmcmp/vac/bg/8.0/bin/blrts_xlc -I/bgl/BlueLight/ppcfloor/bglsys/include
+CCOMP   = /bgl/BlueLight/ppcfloor/bglsys/bin/mpixlc
+# CPPCOMP = cpp
+CPPCOMP = /bgl/BlueLight/ppcfloor/bglsys/bin/mpixlcxx
+# LINK    = /opt/ibmcmp/xlf/bg/10.1/bin/blrts_xlf90
+LINK    = /bgl/BlueLight/ppcfloor/bglsys/bin/mpixlf90
 
+#CONFIG_LIB = -L/bgl/BlueLight/ppcfloor/bglsys/lib -lmpich.rts -lmsglayer.rts -ldevices.rts -lrts.rts -ldevices.r$
+#-----------------------------------------------------------------------------
+# Compilation flags
+#
+#  Three sets of compilation/linking flags are defined: one for optimized code
+#  code ("-opt"), one for debugging ("-debug"), and one for testing ("-test").
+#  Passing these flags to the setup script will cause the value associated with
+#  the corresponding keys (i.e. those ending in "_OPT", "_DEBUG", or "_TEST") to
+#  be incorporated into the final Makefile. For example, passing "-opt" to the
+#  setup script will cause the flags following "FFLAGS_OPT" to be assigned to
+#  "FFLAGS" in the final Makefile. If none of these flags are passed, the default
 ```
