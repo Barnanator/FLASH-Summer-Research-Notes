@@ -66,7 +66,6 @@ Using Makefile.h: /groups/dark/tyler/flash/sites/fen.bluegene.bnl.gov/Makefile.h
 generating Makefile
 Copying data files: 3 copied
 SUCCESS
-
 [tyler@fend01 flash]$ cd object
 [tyler@fend01 object]$ make
 Calculating dependencies
