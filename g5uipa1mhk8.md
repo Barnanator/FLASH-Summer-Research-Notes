@@ -1,21 +1,23 @@
 ```
-[tyler@fend01 object]$ nano Makefile.h
-  GNU nano 2.0.9                         File: Makefile.h
+#-------------------------------------------------------------------
+# FLASH makefile definitions for the llnl bgl
+#
+#
+# These modules set environment variables pointing to the
+# proper library locations. Only python is essential.
+#-------------------------------------------------------------------
 
 #----------------------------------------------------------------------------
+# Set the HDF/HDF5 library paths -- these need to be updated for your system
+#----------------------------------------------------------------------------
 
-MV = mv -f
-AR = ar -r
-RM = rm -f
-CD = cd
-RL = ranlib
-ECHO = echo
+# This is HDF5 1.8.x, so the necessary define for the 1.6 API is included in
+# the HDF5 flags below.
 
-# full optimization does not work on runtime_parameters.F90
-#runtime_parameters.o : runtime_parameters.F90
-#       ${FCOMP} ${FFLAGS_TEST}  $(F90FLAGS) $<
+HDF5_PATH = /gpfs/home2/ajackson/local/hdf5/current/bgl/serial
+# HDF5_PATH = /gpfs/home2/ajackson/local/hdf5/current/bgl/parallel
+# HDF5_PATH = /bgl/apps/hdf5
 
-#amr_%.o : amr_%.F90
-#       ${FCOMP} ${FFLAGS_OPT_NOIPA} ${F90FLAGS} ${FDEFINES} $<
+# NCMPI_PATH = /usr/local/tools/parallel-netcdf/parallel-netcdf-1.0.0
 
 ```
