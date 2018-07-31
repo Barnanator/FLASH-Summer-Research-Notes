@@ -107,5 +107,15 @@ LFLAGS_DEBUG = -g -o
 
 #----------------------------------------------------------------------------
 # Library specific linking
+#  If a FLASH module has a 'LIBRARY xxx' line in its Config file, we need to
+#  create a macro in this Makefile.h for LIB_xxx, which will be added to the
+#  link line when FLASH is built.  This allows us to switch between different
+#  (incompatible) libraries.  We also create a _OPT, _DEBUG, and _TEST
+#  library macro to add any performance-minded libraries (like fast math),
+#  depending on how FLASH was setup.
+#----------------------------------------------------------------------------
+
+LIB_HDF5  = -L$(HDF5_PATH)/lib -lhdf5
+LIB_NCMPI = -L$(NCMPI_PATH)/lib -lpnetcdf
 
 ```
