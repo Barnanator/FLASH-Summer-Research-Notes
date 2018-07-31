@@ -59,5 +59,25 @@ LINK    = /bgl/BlueLight/ppcfloor/bglsys/bin/mpixlf90
 #  be incorporated into the final Makefile. For example, passing "-opt" to the
 #  setup script will cause the flags following "FFLAGS_OPT" to be assigned to
 #  "FFLAGS" in the final Makefile. If none of these flags are passed, the default
+#  behavior will match that of the "-opt" flag.
+#  In general, "-opt" is meant to optimize compilation and linking. "-debug"
+#  should enable runtime bounds checking, debugger symbols, and other compiler-
+#  specific debugging options. "-test" is useful for testing different
+#  combinations of compiler flags particular to your individual system.
+#----------------------------------------------------------------------------
+
+FFLAGS_OPT   = -O2 -qintsize=4 -qrealsize=8 -qdpc=e \
+               -qfixed -qnosave -c \
+               -qsuffix=cpp=F -qarch=440 -qtune=440 -qmaxmem=131072
+
+FFLAGS_TEST  = -O2 -qintsize=4 -qrealsize=8 -qdpc=e \
+               -qfixed -qnosave -c \
+               -qsuffix=cpp=F -qarch=440 -qtune=440 -qmaxmem=131072
+
+FFLAGS_DEBUG = -g -C -qintsize=4 -qrealsize=8 -qfixed -qnosave -c \
+               -qsuffix=cpp=F -qarch=440 -qtune=440 -qmaxmem=131072
+
+F90FLAGS     = -qsuffix=f=F90:cpp=F90 -qfree=f90
+f90FLAGS     = -qsuffix=f=f90:cpp=F90 -qfree=f90
 
 ```
