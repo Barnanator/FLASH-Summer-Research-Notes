@@ -118,4 +118,22 @@ LFLAGS_DEBUG = -g -o
 LIB_HDF5  = -L$(HDF5_PATH)/lib -lhdf5
 LIB_NCMPI = -L$(NCMPI_PATH)/lib -lpnetcdf
 
+
+
+LIB_OPT   =
+LIB_DEBUG =
+LIB_TEST  =
+
+#----------------------------------------------------------------------------
+# Additional machine-dependent object files
+#
+#  Add any machine specific files here -- they will be compiled and linked
+#  when FLASH is built.
+#----------------------------------------------------------------------------
+
+MACHOBJ =
+
+#----------------------------------------------------------------------------
+# Additional commands
+
 ```
