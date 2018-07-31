@@ -1,7 +1,5 @@
 ```
-Using username "tyler".
-Error writing session log (raw mode) to file: putty.log
-tyler@fend01.hpc.ku.dk's password:
+
 Last login: Tue Jul 31 20:11:14 2018 from dynamic-oit-astroturf-d-3.princeton.edu
 [tyler@fend01 ~]$ clear
 [tyler@fend01 ~]$ pwd
